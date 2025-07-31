@@ -5,11 +5,13 @@ function Timer() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setInterval(() => {
       setCount((count) => count + 1);
-      console.log("Print",count);
     }, 1000);
-  },[]);
+    
+    // Cleanup on component unmount
+    return () => clearInterval(timer);
+  }, []);
 
   return <h1>I've rendered {count} times!</h1>;
 }
