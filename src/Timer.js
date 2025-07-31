@@ -9,7 +9,7 @@ function Timer() {
       setCount((count) => count + 1);
     }, 1000);
     
-    // Cleanup on component unmount
+ 
     return () => clearInterval(timer);
   }, []);
 

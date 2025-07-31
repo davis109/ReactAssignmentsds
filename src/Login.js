@@ -17,7 +17,7 @@ function Login() {
         ...formData,
         [name]: value
       });
-      // Clear error when user starts typing
+    
       if (errors[name]) {
         setErrors({
           ...errors,
@@ -30,12 +30,12 @@ function Login() {
     e.preventDefault();
     const newErrors = {};
     
-    // Validate username
+ 
     if (!formData.userName.trim()) {
       newErrors.userName = 'Username is required';
     }
     
-    // Validate password
+
     if (!formData.password) {
       newErrors.password = 'Password is required';
     } else if (formData.password.length < 6) {
