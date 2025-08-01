@@ -13,12 +13,14 @@ import CounterUsingRedux from './CounterUsingRedux';
 import AppUsingReducer from './AppUsingReducer';
 import UseMemoExample from './UseMemoExample';
 import TutorialsComponent from './TutorialsComponent';
+import ExpensiveCalculator from './ExpensiveCalculator';
+import Parent from './Parent';
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<AppUsingReducer/>}/>
-        <Route index element={<UseMemoExample />} />
+        <Route path="/" element={<ExpensiveCalculator/>}/>
+        <Route index element={<Parent />} />
         <Route path='/login' element={<Login />} />
         <Route path="/garage" element={<Garage/>}/>
         <Route path="/timer" element={<Timer/>}/>
